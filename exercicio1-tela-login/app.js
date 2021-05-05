@@ -13,6 +13,7 @@ document.addEventListener('click', (e) => {
 
 
 
+
 window.addEventListener('click', (e) => {
   if (e.target.className == 'btn') {
     const textoName = inputName.value;
