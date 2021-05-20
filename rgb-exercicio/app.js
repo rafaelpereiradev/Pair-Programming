@@ -25,7 +25,7 @@ window.addEventListener('input', (e) => {
 function renderizaRed(value) {
   inputRed.value = value && inputRed;
   // inputRed.value = value;
-  console.log('red ok');
+  console.log('red ok e');
 }
 function renderizaGreen(value) {
   rangeGreen.value = value;
