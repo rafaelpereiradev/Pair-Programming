@@ -1,0 +1,19 @@
+.rgb {
+  background-color: black;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+.rgb-form {
+  margin-bottom: 40px;
+  text-align: center;
+}
+.input {
+  margin-right: 20px;
+  text-align: justify;
+  width: 150px;
+}
+
+label {
+  padding-left: 10px;
+}
