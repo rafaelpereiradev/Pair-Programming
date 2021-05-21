@@ -1,8 +1,8 @@
 .rgb {
-  background-color: black;
   width: 200px;
   height: 200px;
   margin: 0 auto;
+  border: 2px solid #000;
 }
 .rgb-form {
   margin-bottom: 40px;
