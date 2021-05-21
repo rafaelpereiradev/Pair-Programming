@@ -37,6 +37,7 @@ function renderizaGreen(value) {
 function renderizaBlue(value) {
   rangeBlue.value = value;
   inputBlue.value = value;
+  
   renderizaRGB();
 }
 function renderizaRGB() {
