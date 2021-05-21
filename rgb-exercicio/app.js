@@ -15,7 +15,7 @@ window.addEventListener('input', (e) => {
   e.target.className == 'input rangered' || e.target.className == 'input inputred'
     ? renderizaRed(e.target.value) : e.target.className == 'input rangegreen' || e.target.className == 'input inputgreen'
     ? renderizaGreen(e.target.value) : e.target.className == 'input rangeblue' || e.target.className == 'input inputblue'
-    ? renderizaBlue(e.target.value) : console.log('Faça sua cor');
+    ? renderizaBlue(e.target.value) : null;
 });
 
 function renderizaRed(value) {
