@@ -1,7 +1,6 @@
 window.addEventListener('submit', (e) => {
   e.preventDefault();
 });
-
 const rangeRed = document.querySelector('.rangered');
 const rangeGreen = document.querySelector('.rangegreen');
 const rangeBlue = document.querySelector('.rangeblue');
@@ -9,13 +8,19 @@ const inputRed = document.querySelector('.inputred');
 const inputGreen = document.querySelector('.inputgreen');
 const inputBlue = document.querySelector('.inputblue');
 const divRGB = document.querySelector('.rgb');
-divRGB.style.backgroundColor = 'rgb(0, 0, 0)'
+divRGB.style.backgroundColor = `rgb(0, 0, 0)`;
 
 window.addEventListener('input', (e) => {
-  e.target.className == 'input rangered' || e.target.className == 'input inputred'
-    ? renderizaRed(e.target.value) : e.target.className == 'input rangegreen' || e.target.className == 'input inputgreen'
-    ? renderizaGreen(e.target.value) : e.target.className == 'input rangeblue' || e.target.className == 'input inputblue'
-    ? renderizaBlue(e.target.value) : null;
+  e.target.className == 'input rangered' ||
+  e.target.className == 'input inputred'
+    ? renderizaRed(e.target.value)
+    : e.target.className == 'input rangegreen' ||
+      e.target.className == 'input inputgreen'
+    ? renderizaGreen(e.target.value)
+    : e.target.className == 'input rangeblue' ||
+      e.target.className == 'input inputblue'
+    ? renderizaBlue(e.target.value)
+    : null;
 });
 
 function renderizaRed(value) {
