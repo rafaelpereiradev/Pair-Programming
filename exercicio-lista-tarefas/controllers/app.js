@@ -4,6 +4,10 @@ const path = require('path');
 const diretorioHtml = path.resolve('./views');
 
 //criando rota
+app.post('/login', (req, res) => {
+  
+});
+
 app.get('/', (req, res) => {
   res.sendFile(path.join(diretorioHtml + '/index.html'));
   console.log(diretorioHtml);
