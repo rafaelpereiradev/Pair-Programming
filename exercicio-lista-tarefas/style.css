@@ -1,3 +1,4 @@
+/* Estilos gerais */
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +15,15 @@ ul {
 
 li {
   margin: 6px;
+}
+
+button {
+    text-align: center;
+    width: 60px;
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    color: #FFF;
 }
 
 /* Estilo da tela de login */
