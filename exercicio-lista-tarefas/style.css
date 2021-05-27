@@ -18,12 +18,12 @@ li {
 }
 
 button {
-    text-align: center;
-    width: 60px;
-    background: none;
-    border: none;
-    font-size: 1.2em;
-    color: #FFF;
+  text-align: center;
+  width: 60px;
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  color: #fff;
 }
 
 /* Estilo da tela de login */
@@ -53,6 +53,7 @@ input {
   border-radius: 25px;
   padding: 6px;
   width: 240px;
+  display: grid;
 }
 
 .username {
