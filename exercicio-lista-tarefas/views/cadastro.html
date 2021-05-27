@@ -9,17 +9,19 @@
   </head>
   <body>
     <h1>Preencha os campos para criar seu usuário</h1>
-    <form>
-      <label>Nome: <input type="text" class="input nome-cadastro" /></label
-      ><br />
-      <label
-        >Username: <input type="text" class="input username-cadastro" /></label
-      ><br />
-      <label
-        >Senha: <input type="password" class="input senha-cadastro" /></label
-      ><br />
-      <button id="btn-cadastra">Cadastrar Usuário</button>
-    </form>
+    <div class="container">
+      <form class="form">
+        <label>Nome: <input type="text" class="nome-cadastro" /></label><br />
+        <label>Username: <input type="text" class="username-cadastro" /></label
+        ><br />
+        <label>Senha: <input type="password" class="senha-cadastro" /></label
+        ><br />
+        <div class="container">
+          <button id="btn-cadastra" class="btn-login">Verificar</button>
+        </div>
+      </form>
+    </div>
+    <div id="renderiza"></div>
     <script src="./valida.js"></script>
   </body>
 </html>

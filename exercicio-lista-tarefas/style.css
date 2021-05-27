@@ -1,78 +1,84 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: #282a36;
-    color: #FFF;
+  background-color: #282a36;
+  color: #fff;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 li {
-    margin: 6px;
+  margin: 6px;
 }
 
 /* Estilo da tela de login */
 .titulo {
-    margin-top: 20px;
-    font-size: 2em;
-    text-align: center;
+  margin-top: 20px;
+  font-size: 2em;
+  text-align: center;
 }
 
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .form {
-    margin-top: 100px;
-    padding: 20px;
+  margin-top: 100px;
+  padding: 20px;
 }
 
 .titulo-login {
-    text-align: center;
-    padding-bottom: 8px;
+  text-align: center;
+  padding-bottom: 8px;
 }
 
 input {
-    border-radius: 25px;
-    padding: 6px;
-    width: 240px;
+  border-radius: 25px;
+  padding: 6px;
+  width: 240px;
 }
 
 .username {
-    display: flex;
-    margin-bottom: 15px;
+  display: flex;
+  margin-bottom: 15px;
 }
 
 .password {
-    display: flex;
-    margin-bottom: 15px;
+  display: flex;
+  margin-bottom: 15px;
 }
 
 .btn-login {
-    text-align: center;
-    width: 60px;
-    background: none;
-    border: none;
-    font-size: 1.2em;
-    color: #FFF;
+  text-align: center;
+  width: 60px;
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  color: #fff;
 }
 
 .contact {
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    height: 100px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: #44475a;
-    font-size: 1.1em;
-    color: #50fa7b;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #44475a;
+  font-size: 1.1em;
+  color: #50fa7b;
+}
+#renderiza {
+  margin-left: 500px;
+}
+p {
+  margin-bottom: 8px;
 }
