@@ -30,6 +30,7 @@ function renderiza(nome, user, senha) {
   divRenderiza.appendChild(nomeRender);
   divRenderiza.appendChild(userRender);
   divRenderiza.appendChild(senhaRender);
+  criaBtnEdita();
   criaBtnOk();
   // divRenderiza.appendChild(btnEdita);
 }
@@ -45,4 +46,5 @@ function criaBtnEdita() {
   btnEdita.style.marginLeft = '40px';
   btnEdita.classList.add('btn-login');
   btnEdita.textContent = 'Editar';
+  divRenderiza.appendChild(btnEdita);
 }
