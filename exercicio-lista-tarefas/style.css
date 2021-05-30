@@ -24,6 +24,7 @@ button {
   border: none;
   font-size: 1.2em;
   color: #fff;
+  cursor: pointer;
 }
 
 /* Estilo da tela de login */
