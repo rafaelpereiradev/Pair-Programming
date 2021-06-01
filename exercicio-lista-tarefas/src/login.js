@@ -1,9 +1,13 @@
 const btnLogin = document.querySelector('.btn-login');
 const input = document.querySelectorAll('input');
-console.log(input);
+
 
 btnLogin.addEventListener('click', (e) => {
     e.preventDefault();
-    const username = input.querySelector('username').value
-    console.log(username.value)
+    const username = input[0].value;
+    const password = input[1].value;
+    if(username && password) {
+        console.log('IF');
+    }
+    console.log('OK');
 });
