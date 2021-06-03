@@ -1,6 +1,6 @@
-window.addEventListener('submit', (e) => {
-  e.preventDefault();
-});
+// window.addEventListener('submit', (e) => {
+//   e.preventDefault();
+// });
 
 // Pegando os Inputs
 const inputNome = document.querySelector('.nome-cadastro');

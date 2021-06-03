@@ -9,3 +9,7 @@ exports.login = (req, res, next) => {
 exports.cadastro = (req, res, next) => {
     res.render('cadastro')
 }
+
+exports.register = (req, res, next) => {
+    res.send('cadastro')
+}
