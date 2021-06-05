@@ -1,8 +1,8 @@
-// window.addEventListener('submit', (e) => {
-//   e.preventDefault();
-// });
+window.addEventListener('submit', (e) => {
+  e.preventDefault();
+});
 
-// Pegando os Inputs
+//Pegando os Inputs
 const inputNome = document.querySelector('.nome-cadastro');
 const inputUser = document.querySelector('.username-cadastro');
 const inputSenha = document.querySelector('.senha-cadastro');
@@ -13,24 +13,27 @@ const labelUser = document.querySelector('.label-user');
 const labelSenha = document.querySelector('.label-senha');
 const span = document.getElementById('span');
 
-btnCadastra.addEventListener('click', () => {
-  const nome = verifica(inputNome.value);
+btnCadastra.addEventListener('click', function iniciaForm() {
+  const nome = verificaNome(inputNome.value);
   const username = verifica(inputUser.value);
   const senha = verifica(inputSenha.value);
 
-  if (nome) {
-    erroNome(nome);
+  function verificaNome(nome) {
+    if (nome <= 0) {
+      erroNome();
+      return true;
+    }
   }
   if (username) {
-    erroUser(username);
+    erroUser();
   }
   if (senha) {
-    erroSenha(senha);
+    erroSenha();
   }
-  if (nome == false && username == false && senha == false) {
+  if (!nome && !username && !senha) {
     renderizaOk();
   }
-  console.log(nome, username, senha);
+
   function verifica(valor) {
     return /\s/g.test(valor) || valor.length == 0;
   }
@@ -77,30 +80,20 @@ btnCadastra.addEventListener('click', () => {
     const titulo = document.createElement('h3');
     render();
     function render() {
-      nomeOk.innerHTML = `<b>Nome</b> : ${inputNome.value}`;
+      nomeOk.innerHTML = `<b>Nome</b> : ${inputNome.value.trim()}`;
       userOk.innerHTML = `<b>Username</b> : ${inputUser.value}`;
       senhaOk.innerHTML = `<b>Senha</b> : ${inputSenha.value}`;
       titulo.innerText = 'Usuário criado com sucesso!';
-
+      if (divRenderiza.childElementCount == 4) {
+        btnCadastra.removeEventListener('click', iniciaForm);
+        return;
+      }
       divRenderiza.appendChild(titulo);
       divRenderiza.appendChild(nomeOk);
       divRenderiza.appendChild(userOk);
       divRenderiza.appendChild(senhaOk);
     }
   }
-
-  // function renderizaOkUser() {
-  //   const p = criaP();
-  //   p.innerHTML = inputUser.value;
-  //   divRenderiza.appendChild(p);
-  //   return;
-  // }
-  // function renedrizaOkSenha() {
-  //   const p = criaP();
-  //   p.innerHTML = inputUser.value;
-  //   divRenderiza.appendChild(p);
-  //   return;
-  // }
 });
 
 inputNome.addEventListener('click', (e) => {
@@ -118,82 +111,3 @@ inputSenha.addEventListener('click', (e) => {
     labelSenha.lastElementChild.remove();
   }
 });
-
-//renderiza(nomeVerificado, usernameVerificado, senhaVerificada);
-
-// function renderiza(nome, user, senha) {
-//   const dadosUsuario = {
-//     nome: criaP('Nome do Usuário :', nome, 'nome'),
-//     username: criaP('Username : ', user, 'user'),
-//     senha: criaP('Senha : ', senha, 'senha'),
-//   };
-
-// function criaP(titulo, valor, id) {
-//   const p = document.createElement('p');
-//   if (verifica(valor)) {
-//     p.innerHTML = `${titulo} contêm caractére inválido,ou está vazio.`;
-//     p.classList.add(id);
-
-//     p.classList.add('erro');
-//     return trataErro(p);
-//   }
-//   p.innerHTML = `<b>${titulo}</b>${valor}`;
-//   p.classList.add(id);
-//   return p;
-// }
-// criaForm(dadosUsuario);
-// }
-
-// function criaForm(obj) {
-//   const quebra = document.createElement('br');
-//   if (
-//     obj.nome != undefined &&
-//     obj.username != undefined &&
-//     obj.senha != undefined
-//   ) {
-//     divRenderiza.appendChild(obj.nome);
-//     divRenderiza.appendChild(obj.username);
-//     divRenderiza.appendChild(obj.senha);
-//     divRenderiza.appendChild(quebra);
-//   }
-//   // trataErro();
-// }
-// function trataErro(p) {
-//   if (p.className == 'erro') {
-//     labelNome.appendChild(p);
-//   }
-// if (typeof p == undefined) {
-//   labelNome.appendChild(p);
-//   console.log(p);
-// }
-// }
-// if (p.className == 'user erro' && labelUser.childElementCount > 1) {
-//   labelUser.appendChild(p);
-// }
-// if (p.className == 'senha erro' && labelSenha.childElementCount > 1) {
-//   labelSenha.appendChild(p);
-// }
-// limpaEssa();
-// }
-
-// function limpaEssa() {
-//   if (labelNome.childElementCount > 1) {
-//     labelNome.lastChild.remove();
-//   }
-// }
-
-//     }
-//   });
-
-//   if (e.target.id == '#btn-cadastra') {
-//     user.childNodes.forEach((element) => {
-//       element.className == 'user erro'.remove();
-//     });
-//   }
-// }
-
-// if (e.target.id == '#btn-cadastra') {
-//   senha.childNodes.forEach((element) => {
-//     element.className == 'senha erro'.remove();
-//   });
-// }
