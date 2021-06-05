@@ -24,8 +24,8 @@ btnCadastra.addEventListener('click', function iniciaForm() {
 
   //envio dos inputs para tratamento
   function verificaNome(nome) {
-    if (nome <= 0) {
-      // focus();
+    const regex = new RegExp('^[ 0-9a-zA-Zàèìòùáéíóúâêîôûãõ\b]+$');
+    if (nome <= 0 || !regex.test(nome)) {
       erroNome();
       return true;
     }
