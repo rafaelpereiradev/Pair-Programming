@@ -11,7 +11,6 @@ const divRenderiza = document.querySelector('#renderiza');
 const labelNome = document.querySelector('.label-nome');
 const labelUser = document.querySelector('.label-user');
 const labelSenha = document.querySelector('.label-senha');
-const span = document.getElementById('span');
 
 btnCadastra.addEventListener('click', function iniciaForm() {
   //verificando se já existe uma renderização para o usuário.
