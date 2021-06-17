@@ -1,3 +1,5 @@
+const { listUser } = require("../../model/dataUser");
+
 window.addEventListener('submit', (e) => {
   e.preventDefault();
 });
@@ -14,3 +16,5 @@ btn.addEventListener('click', () => {
   p.textContent = inputLista.value;
   inputLista.value = '';
 });
+
+console.log(listUser())
